@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Al Hikmah Institute – Hope for Bihar</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="navbar">
+     <div class="logo">
+  <img src="../images/logo.jpg" alt="Logo">
+  <span>Al Hikmah Institute</span>
+</div>
+
+      <ul class="nav-links">
+        <li><a href="#mission">Mission</a></li>
+        <li><a href="#announcements">Announcements</a></li>
+        <li><a href="#committee">Team</a></li>
+        <li><a href="../html/gallery.html">Photo Gallery</a></li>
+        <li><a href="#join">Join Us</a></li>
+        <li><a href="#donate" class="donate-btn">Donate</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Bringing Light Through Education</h1>
+      <p>Empowering the underprivileged children of Bihar with knowledge, care, and hope.</p>
+      <a href="#donate" class="cta-btn">Support Our Mission</a>
+    </div>
+  </section>
+
+ 
+
+
+  <!-- Mission Section -->
+  <section id="mission" class="about-section">
+    <div class="container">
+      <h2>Our Mission</h2>
+      <p>
+        We are on the Mission to promote inclusive development by educating and skilling
+        underprivileged children through easy access to quality education. This is to achieve rapid
+        educational transformation in the weaker sections of society who usually cannot afford the
+        expenses of educating their children. We aim at providing quality education in line with the
+        CBSE & ISC Curriculum.
+      </p>
+      <p>
+        Since the students come from the underprivileged and deprived section of society, they are also
+        malnourished and unkempt; hence <strong>Al Hikmah</strong> also aims at improving their health
+        and hygiene by providing healthy food with a balanced diet and self-care training. These
+        children and their families cannot even afford basic food, clothing, and other necessities.
+        At <strong>Al Hikmah Institute</strong>, our mission is to provide good food, clothing, medical
+        facilities, self-care and self-defense training, and other essential facilities that bring
+        holistic development within them.
+      </p>
+      <p>
+        We aim to work on social problems such as child marriage, sexual violence, lack of awareness
+        about menstrual hygiene and child labour, drug addiction, and exposure to drug environments
+        faced by children of marginalized communities.
+      </p>
+    <div class="section-logo">
+  <img src="../images/logo.jpg" alt="Al Hikmah Institute Logo">
+</div>
+      <h2>para 1</h2>
+      <p>
+        Initially what was merely a vision to us—and a frivolous notion for others—<strong>Al Hikmah
+        Institute</strong> started with just 44 orphan kids in a 1,269-square-foot apartment. After
+        relentless toiling, land was taken on lease and that commitment has transpired into a
+        16,552.8-square-foot premises that imparts quality education and holistic nourishment of both
+        body and mind to more than 350 destitute and helpless children.
+      </p>
+      <p>
+        It is after two years of rigorous and selfless hard work that we now seek to purchase two acres
+        of land upon which we have laid the foundation of a residential school—one that will comprise
+        a full school building and related facilities.
+      </p>
+    </div>
+  </section>
+
+
+<!-- Event Banner Section -->
+ <section id="announcements" class="announcements"></section>
+<div class="announcements">
+  <h2>Upcoming Event</h2>
+
+  <a href="#" class="event-banner" data-full="C:\Users\ARSHAN\Desktop\h\images\announcemnet.jpg">
+    <img src="../images/banner.png" alt="Event Banner">
+    <div class="event-text">
+      <h3>Click to view the full event banner</h3>
+    </div>
+  </a>
+</div>
+</section>
+
+<!-- Fullscreen overlay -->
+<div class="fullscreen-overlay" id="overlay">
+  <img id="overlay-img" alt="Full Image">
+</div>
+
+<style>
+.fullscreen-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.fullscreen-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 14px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease-in-out;
+}
+
+.fullscreen-overlay img:hover {
+  transform: scale(1.03);
+}
+</style>
+
+<script>
+document.querySelectorAll('.event-banner').forEach(banner => {
+  banner.addEventListener('mouseenter', () => {
+    const overlay = document.getElementById('overlay');
+    const overlayImg = document.getElementById('overlay-img');
+    const fullSrc = banner.getAttribute('data-full'); // ✅ get large image
+    overlayImg.src = fullSrc;
+    overlay.style.display = 'flex';
+  });
+});
+
+document.getElementById('overlay').addEventListener('click', () => {
+  document.getElementById('overlay').style.display = 'none';
+});
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    document.getElementById('overlay').style.display = 'none';
+  }
+});
+</script>
+
+
+  <!-- Committee Section -->
+  <section id="committee" class="committee-section">
+    <div class="container">
+      <h2>Our Team Members</h2>
+      <div class="committee-grid">
+        <div class="member-card">
+          <img src="images/member1.jpg" alt="Member 1" />
+          <h3>Mohammad Arif</h3>
+          <p>Chairman</p>
+        </div>
+        <div class="member-card">
+          <img src="images/member2.jpg" alt="Member 2" />
+          <h3>Fatima Begum</h3>
+          <p>Secretary</p>
+        </div>
+        <div class="member-card">
+          <img src="images/member3.jpg" alt="Member 3" />
+          <h3>Ahmed Raza</h3>
+          <p>Treasurer</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Join Us Section -->
+  <section id="join" class="join-section">
+    <div class="container">
+      <h2>Join Our Mission</h2>
+      <p>
+        Be a part of Al Hikmah Institute's journey towards a brighter future. Join us as a volunteer,
+        supporter, or ambassador of change.
+      </p>
+      <a href="mailto:alhikmahinstitute@gmail.com" class="cta-btn">Join Us</a>
+    </div>
+  </section>
+
+  <!-- Donate Section -->
+  <section id="donate" class="donate-section">
+    <div class="container">
+      <h2>Support Our Mission</h2>
+      <p>
+        Your contribution helps us educate, feed, and nurture children in need. Every donation brings
+        us closer to building a school for the poor in Bihar.
+      </p>
+      <img src="images/qr.png" alt="Donation QR" class="qr-img" />
+      <p class="upi">UPI ID: <strong>alhikmah@upi</strong></p>
+      <p class="note">Please verify the recipient name in your UPI app before donating.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2025 Al Hikmah Institute | Hope for Bihar</p>
+      <p>Contact: alhikmahinstitute@gmail.com | Patna, Bihar</p>
+    </div>
+  </footer>
+
+  
+
+</body>
+</html>
